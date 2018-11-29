@@ -1,0 +1,16 @@
+<?php
+namespace App\Http\Repositories\Impl;
+
+use App\Customer;
+use App\Http\Repositories\CustomerRepository;
+use App\Repositories\Eloquent\EloquentRepository;
+
+class CustomerRepositoryImpl extends EloquentRepository implements CustomerRepository
+{
+    public function getModel()
+    {
+        $model = Customer::class;
+        return $model;
+    }
+
+}
